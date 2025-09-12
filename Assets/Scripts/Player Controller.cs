@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class   PlayerController : MonoBehaviour
 {
     [Header("이동 설정")]
     public float walkSpeed = 3.0f;
