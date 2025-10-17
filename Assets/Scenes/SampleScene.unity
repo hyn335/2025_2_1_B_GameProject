@@ -391,8 +391,11 @@ MonoBehaviour:
   walkSpeed: 5
   runSpeed: 15
   crouchSpeed: 10
+  jumpHeight: 2
+  gravity: -9.81
+  landingDuration: 0.3
   attackDuration: 0.8
-  MoveWhileAttacking: 0
+  canMoveWhileAttacking: 0
   animator: {fileID: 728952931}
 --- !u!143 &698217716
 CharacterController:
