@@ -85,6 +85,9 @@ public class InteractableObject : MonoBehaviour
             case InteractionType.Cellectible:
                 CollectItem(); 
                 break;
+            case InteractionType.NPC:
+                TalkToNPC();
+                break;
         }
     }
     

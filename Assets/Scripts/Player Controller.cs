@@ -64,13 +64,13 @@ public class   PlayerController : MonoBehaviour
         {
             Debug.Log("떨어지기 시작");
         }
-        if (isGrounded && velocity.y < 0)
+
+        if(isGrounded && velocity.y < 0)
         {
             velocity.y = -2.0f;
 
-            if (!wasGrounded && animator != null)      //착지를 진행
+            if(!wasGrounded && animator != null)      //착지를 진행
             {
-
                 isLanding = true;
                 landingTimer = landingDuration;
             }
@@ -134,7 +134,8 @@ public class   PlayerController : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
-            if(animator != null)
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);      //점프 공식
+            if (animator != null)
             {
                 animator.SetTrigger("jumpTrigger");
             }
